@@ -19,8 +19,8 @@
     left: calc(50% - 200px);
     color: black;
     padding: 40px;
-    width:600px;
-    height:350px;
+    width: min(100vw,600px);
+    height: 350px;
     z-index: 9999;
     margin: auto;
     background: rgba(0, 0, 0, 0.1);
