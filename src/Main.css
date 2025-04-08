@@ -1,0 +1,106 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.wide-search {
+  width: 100%;
+  min-width: 400px; /* sau orice lățime vrei */
+}
+
+
+.search-bar-container {
+  padding-top: 20vh;
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+}
+
+
+/* Stiluri pentru Navbar */
+.navbar {
+  padding: 1.5rem 2rem;  /* Crește padding-ul pentru un navbar mai mare */
+  background-color: rgba(248, 229, 199, 0); /* Culoare de fundal transparentă */
+  backdrop-filter: blur(6px); /* Adaugă efect de blur pe fundal */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01); /* Adaugă umbra pentru un efect mai pronunțat */
+  transition: all 0.3s ease; /* Animație pentru tranziții */
+}
+
+/* Înălțimea navbar-ului și stilizarea elementelor */
+.navbar-brand,
+.nav-link {
+  font-size: 1.25rem;  /* Font mai mare pentru textul din navbar */
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #333;  /* Textul navbar-ului */
+  transition: color 0.3s ease; /* Tranziție la hover */
+}
+
+/* Efect de hover pe link-uri */
+.nav-link:hover {
+  color: #007bff;  /* Culoare albastră când treci cu mouse-ul */
+}
+
+/* Navbar responsive - se face mai mare la rezoluții mici */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem; /* Reducem padding-ul pe dispozitive mai mici */
+  }
+  .nav-link {
+    font-size: 1.1rem;  /* Font mai mic pentru ecranele mici */
+  }
+}
+Copy
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
