@@ -1,18 +1,12 @@
-// Login.js
-import React, {act, useRef, useState} from 'react';
-import './Login.css';
+// InstallPage.js
+import React, {useRef} from 'react';
+import './InstallPage.css';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, Stage} from '@react-three/drei';
-import { useNavigate } from 'react-router-dom';
-import  axios  from 'axios';
-import { useCookies } from 'react-cookie';
 
 function RotatingModel({ position, scale = 1 , path = "/book.glb"}) {
   const { scene } = useGLTF(path); // Asigură-te că e în /public
   const ref = useRef();
-  let change = 0.0001;
-  let accumchange = 0;
-  let max = 0.02;
   useFrame(() => {
     if (ref.current) {
       ref.current.rotation.y += 0.006;
@@ -25,20 +19,10 @@ function RotatingModel({ position, scale = 1 , path = "/book.glb"}) {
 }
 
 const Page = () => {
-  let [state, setState] = useState(1);
-  let [username, setUsername] = useState("");
-  let [email, setEmail] = useState("");
-  let [password, setPassword] = useState(""); 
-
-  let navigate = useNavigate();
-  
-  const [cookies, setCookie] = useCookies(['user']);
-
-  
   return(
-  <div className="login-page">
-          <div className="login-container">
-          <h3 style={{color: "#d11f31a", fontSize:40}}><b><i>onlinedi/vision</i></b></h3>
+  <div className="install-page">
+          <div className="install-container">
+          <h3 style={{color: "#d11f31", fontSize:40}}><b><i>onlinedi/vision</i></b></h3>
           <pre><b>Slashing* division online.</b></pre>
           <p style={{textAlign: "center", color: "white", fontSize: 14, marginBottom: 0, marginTop: 20}}><i>quick install</i></p>
           <div className="install" >
@@ -64,7 +48,7 @@ const Page = () => {
     </div>
   );
 }
-export default function Login() {
+export default function InstallPage() {
   console.log("test");
   return (
     <>
