@@ -1,4 +1,4 @@
-.login-page {
+.install-page {
     display: flex;
     height: 100vh;
     background:white;
@@ -15,7 +15,7 @@
   .submit {
     background: black;
   }
-  .login-container {
+  .install-container {
     left: calc(50% - 200px);
     color: black;
     padding: 40px;
@@ -33,11 +33,11 @@
     gap: 0px;
   }
   
-  .login-container h2 {
+  .install-container h2 {
     margin-bottom: 30px;
   }
   
-  .login-container form {
+  .install-container form {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -51,7 +51,7 @@ h3,pre {
 pre {
   font-size: calc(16px);
 }
-  .login-container .formdiv {
+  .install-container .formdiv {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -66,7 +66,7 @@ pre {
     box-shadow: 0 0 20px black;
     overflow-x: scroll;
  }
-  .login-container input {
+  .install-container input {
     padding: 10px 15px;
     border: none;
     border-radius: 10px;
@@ -74,13 +74,13 @@ pre {
     color: black;
     font-size: 1rem;
   }
-  .login-container input:focus {
+  .install-container input:focus {
     outline: 3px solid black;
   }
-  .login-container input:hover {
+  .install-container input:hover {
     background-color: #f1f1e1e1
   }
-  .login-container button {
+  .install-container button {
     padding: 12px;
     background: black;
     color: white;
@@ -92,7 +92,7 @@ pre {
     
   }
   
-  .login-container button:hover {
+  .install-container button:hover {
     background: #161c24;
   }
   
