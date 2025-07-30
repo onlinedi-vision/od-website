@@ -4,7 +4,9 @@ pipeline {
   stages {
     stage('Start Landing Page') {
       steps {
-        sh 'JENKINS_NODE_COOKIE=dontKillMe npm start > ~/website.logs 2> ~/website_error.logs &' 
+        sh '\
+          npm i\
+          JENKINS_NODE_COOKIE=dontKillMe npm start > ~/website.logs 2> ~/website_error.logs &' 
       }
     }
   }
