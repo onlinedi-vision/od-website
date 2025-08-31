@@ -27,13 +27,13 @@ const Page = () => {
           <p style={{textAlign: "center", color: "white", fontSize: 14, marginBottom: 0, marginTop: 20}}><i>quick install</i></p>
           <div className="install" >
           <div className="terminal">
-            <p style={{margin:2, fontSize:14}}>$ curl https://raw.githubusercontent.com/onlinedi-vision/install/main/i.sh | bash</p>
+            <p style={{margin:2, fontSize:10}}>$ curl https://raw.githubusercontent.com/onlinedi-vision/install/main/i.sh | bash</p>
           </div>
           </div>
           <p style={{textAlign: "center", color: "white", fontSize: 14, marginBottom: 0, marginTop: 20}}><i>install from source (README.md)</i></p>
           <div className="install" >
           <div className="terminal">
-            <p style={{margin:2, fontSize:14}}> $ git clone https://github.com/onlinedi-vision/od-client.git</p>
+            <p style={{margin:2, fontSize:10}}> $ git clone https://github.com/onlinedi-vision/od-client.git</p>
           </div>
           </div>
        </div>
