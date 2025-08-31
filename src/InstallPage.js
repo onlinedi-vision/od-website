@@ -24,7 +24,7 @@ const Page = () => {
           <div className="install-container">
           <h3 style={{color: "#d11f31", fontSize:40}}><b><i>onlinedi/vision</i></b></h3>
           <pre><b>Slashing* division online.</b></pre>
-          <p style={{textAlign: "center", color: "white", fontSize: 14, marginBottom: 0, marginTop: 20}}><i>quick install</i></p>
+          <p style={{textAlign: "center", color: "white", fontSize: 14, marginBottom: 0, marginTop: 20}}><i>quick install (linux)</i></p>
           <div className="install" >
           <div className="terminal">
             <p style={{margin:1, fontSize:11}}>$ curl https://raw.githubusercontent.com/onlinedi-vision/install/main/i.sh | bash</p>
