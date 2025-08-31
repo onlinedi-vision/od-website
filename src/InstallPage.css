@@ -19,6 +19,8 @@
     left: calc(50% - 200px);
     color: black;
     padding: 40px;
+    padding-left:30px;
+    padding-right:30px;
     width: min(100vw,600px);
     height: 350px;
     z-index: 9999;
@@ -64,7 +66,7 @@ pre {
     background: rgba(0, 0,0, 1);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 20px black;
-    width: 60%;
+    width: 100%;
  }
   .install-container input {
     padding: 10px 15px;
@@ -102,6 +104,5 @@ pre {
   .install {
     background-color: rgba(0,0,0,0);
     border: solid 1px #ef819d;
-    border-radius: 0px;
-  
+    border-radius: 0px; 
   }
