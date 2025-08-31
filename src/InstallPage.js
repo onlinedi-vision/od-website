@@ -27,7 +27,7 @@ const Page = () => {
           <p style={{textAlign: "center", color: "white", fontSize: 14, marginBottom: 0, marginTop: 20}}><i>quick install</i></p>
           <div className="install" >
           <div className="terminal">
-            <p style={{margin:2, fontSize:14}}> $ bash &lt;$(wget -qO- https://onlinedi.vision/cdn/install/i.sh)</p>
+            <p style={{margin:2, fontSize:14}}>$ curl https://raw.githubusercontent.com/onlinedi-vision/install/main/i.sh | bash</p>
           </div>
           </div>
           <p style={{textAlign: "center", color: "white", fontSize: 14, marginBottom: 0, marginTop: 20}}><i>install from source (README.md)</i></p>
