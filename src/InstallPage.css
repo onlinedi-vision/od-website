@@ -64,7 +64,7 @@ pre {
     background: rgba(0, 0,0, 1);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 20px black;
-    overflow-x: scroll;
+    width: 60%;
  }
   .install-container input {
     padding: 10px 15px;
