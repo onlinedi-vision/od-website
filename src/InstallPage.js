@@ -3,6 +3,10 @@ import React, {useRef} from 'react';
 import './InstallPage.css';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, Stage} from '@react-three/drei';
+import { FaWindows } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaUbuntu } from "react-icons/fa";
+import { FaFedora } from "react-icons/fa";
 
 function RotatingModel({ position, scale = 1 , path = "/book.glb"}) {
   const { scene } = useGLTF(path); // Asigură-te că e în /public
@@ -22,19 +26,39 @@ const Page = () => {
   return(
   <div className="install-page">
           <div className="install-container">
-          <h3 style={{color: "#d11f31", fontSize:40}}><b><i>onlinedi/vision</i></b></h3>
-          <pre><b>Slashing* division online.</b></pre>
-          <p style={{textAlign: "center", color: "white", fontSize: 14, marginBottom: 0, marginTop: 20}}><i>quick install (linux)</i></p>
+
+
+            <h3 style={{color: "#d11f31", fontSize:40}}><b><i>onlinedi/vision</i></b></h3>
+            <pre style={{marginBottom: "0px", height:"50px"}}><b>Slashing* division online.</b></pre>
+          <p style={{textAlign: "center", color: "white", fontSize: 14, marginBottom: 0, marginTop: 10}}><i>install from source</i></p>
           <div className="install" >
           <div className="terminal">
-            <p style={{margin:1, fontSize:11}}>$ curl https://raw.githubusercontent.com/onlinedi-vision/install/main/i.sh | bash</p>
+            <p style={{margin:1, fontSize:14}}> $ git clone https://github.com/onlinedi-vision/od-client.git</p>
+            <br/>
+            <p style={{margin:1, fontSize:14}}> $ cd od-client && npm i && npm run tauri build</p>
           </div>
           </div>
-          <p style={{textAlign: "center", color: "white", fontSize: 14, marginBottom: 0, marginTop: 20}}><i>install from source (README.md)</i></p>
-          <div className="install" >
-          <div className="terminal">
-            <p style={{margin:1, fontSize:11}}> $ git clone https://github.com/onlinedi-vision/od-client.git</p>
-          </div>
+
+          <p style={{textAlign: "center", color: "white", fontSize: 14, marginBottom: 0, marginTop: 10}}><i>...or use our official installers</i></p>
+          <div className="icons">
+
+            <a className="windows-icon-link" href="http://github.com/onlinedi-vision/od-client">
+              <FaWindows size="40px" className="windows-icon"/>
+            </a>
+
+            <a className="windows-icon-link" href="http://github.com/onlinedi-vision/od-client">
+              <FaUbuntu size="40px" className="windows-icon"/>
+            </a>
+
+            <a className="windows-icon-link" href="http://github.com/onlinedi-vision/od-client">
+              <FaFedora size="40px" className="windows-icon">
+              </FaFedora>
+            </a>
+
+            <a className="windows-icon-link" href="http://github.com/onlinedi-vision/od-client">
+              <FaGithub size="40px" className="windows-icon">
+              </FaGithub>
+            </a>
           </div>
        </div>
         

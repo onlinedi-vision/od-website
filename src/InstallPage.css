@@ -67,6 +67,7 @@ pre {
     backdrop-filter: blur(20px);
     box-shadow: 0 0 20px black;
     width: 100%;
+    height: 100%;
  }
   .install-container input {
     padding: 10px 15px;
@@ -105,4 +106,32 @@ pre {
     background-color: rgba(0,0,0,0);
     border: solid 1px #ef819d;
     border-radius: 0px; 
+    height:50px;
   }
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+    height: 20%;    
+  }
+
+  .windows-icon-link {
+
+    position: relative;
+    /* margin-top: 2a0px; */
+    margin-right: 10px;
+    left: calc(50% - 95px);
+  }
+
+  .windows-icon {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    color: white;
+  }
+
+  .windows-icon:hover {
+    color: #faa0a7;
+  }
+
+
