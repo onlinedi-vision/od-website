@@ -129,7 +129,7 @@ pre {
     background-color: rgba(0,0,0,0);
     border: solid 1px #ef819d;
     border-radius: 0px; 
-    height:140px;
+    height:auto;
   }
   
   @media screen and (min-width: 600px) {
