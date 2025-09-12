@@ -1,4 +1,4 @@
-// InstallPage.js
+  // InstallPage.js
 import React, {useRef} from 'react';
 import './InstallPage.css';
 import { Canvas, useFrame } from '@react-three/fiber';
@@ -42,20 +42,20 @@ const Page = () => {
           <p style={{textAlign: "center", color: "white", fontSize: 14, marginBottom: 0, marginTop: 10}}><i>...or use our official installers</i></p>
           <div className="icons">
 
-            <a className="windows-icon-link" href="http://github.com/onlinedi-vision/od-client">
+            <a className="windows-icon-link" href="https://github.com/onlinedi-vision/od-client/releases/latest/download/client.msi">
               <FaWindows size="40px" className="windows-icon"/>
             </a>
 
-            <a className="windows-icon-link" href="http://github.com/onlinedi-vision/od-client">
+            <a className="windows-icon-link" href="https://github.com/onlinedi-vision/od-client/releases/latest/download/client.deb">
               <FaUbuntu size="40px" className="windows-icon"/>
             </a>
 
-            <a className="windows-icon-link" href="http://github.com/onlinedi-vision/od-client">
+            <a className="windows-icon-link" href="https://github.com/onlinedi-vision/od-client/releases/latest/download/client.rpm">
               <FaFedora size="40px" className="windows-icon">
               </FaFedora>
             </a>
 
-            <a className="windows-icon-link" href="http://github.com/onlinedi-vision/od-client">
+            <a className="windows-icon-link" href="https://github.com/onlinedi-vision/od-client/releases/latest">
               <FaGithub size="40px" className="windows-icon">
               </FaGithub>
             </a>
