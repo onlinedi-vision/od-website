@@ -65,7 +65,7 @@ const Page = () => {
     <div className='canvas-side'>
         <Canvas dpr={[1,1]} shadows camera={{ fov: 100 }} style={{ backgroundColor:"black", position: "absolute", top: 0, left: '0%', height: "100%", width: "100%" }}>
             <Stage environment={"sunset"}>
-              <RotatingModel scale={40} position={0, 0, 0} path={'./heart.glb'}  />
+              <RotatingModel scale={40} position={0, 0, 0} path={'./cat.glb'}  />
           </Stage>
         </Canvas>
        </div>
