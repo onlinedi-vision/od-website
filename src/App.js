@@ -5,14 +5,19 @@ import InstallPage from './InstallPage.js';
 
 function App() {
   return (
-	  <BrowserRouter>
-      <div className="App">        
-        <Routes>
-          <Route path="/" element={<InstallPage />} />
-          <Route path="/login" element={<InstallPage />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <>
+      <meta content="Di/Vision Online" property="og:title"/>
+      <meta content="The Open-Source IRC & VoIP app that's slashing* division online." property="og:description"/>
+      <meta content="https://onlinedi-vision.github.io/image.png" property="og:image"/>
+  	  <BrowserRouter>
+        <div className="App">        
+          <Routes>
+            <Route path="/" element={<InstallPage />} />
+            <Route path="/login" element={<InstallPage />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </>
   );
 }
 
