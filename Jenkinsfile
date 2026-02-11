@@ -2,6 +2,10 @@ pipeline {
   agent any
 
   stages {
+    stage('Stop Compose') {
+      sh 'docker compose down'
+    }
+  
     stage('Start Landing Page') {
       steps {
         sh 'npm i'
