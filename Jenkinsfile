@@ -3,7 +3,9 @@ pipeline {
 
   stages {
     stage('Stop Compose') {
-      sh 'docker compose down'
+      steps {
+        sh 'docker compose down'
+      }
     }
   
     stage('Start Landing Page') {
