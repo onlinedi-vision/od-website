@@ -2,6 +2,7 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import React from 'react';
 import InstallPage from './InstallPage.js';
+import HealthCheck from './HealthCheck.js';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<InstallPage />} />
             <Route path="/login" element={<InstallPage />} />
+            <Route path="/health" element={<HealthCheck />} />
           </Routes>
         </div>
       </BrowserRouter>
