@@ -10,6 +10,7 @@ pipeline {
                                         withDockerRegistry(url: 'https://registry.onlinedi.vision:5000',  credentialsId:'docker-registry') {
                                                 version="v" + sh(script:'echo ${GIT_BRANCH} | cut -d/ -f3- | xargs echo -n', returnStdout: true)
                                                 echo "VERSION TO BE DEPLOYED: $version"
+						sh "npm i"
                                                 sh "docker build . -t od-website:${version}"
                                                 sh "docker tag od-website:${version} registry.onlinedi.vision:5000/od-website:${version}"
                                                 sh "docker push registry.onlinedi.vision:5000/od-website:${version}"
