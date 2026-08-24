@@ -3,17 +3,26 @@ pipeline {
   agent any
 
   stages {
-          stage('Push Image to Docker Registry') {
+          stage('Build and Push Image') {
                   steps {
                                 script {
+                                        if (!env.GIT_BRANCH?.trim()) {
+                                                error("GIT_BRANCH is missing; cannot calculate image version")
+                                        }
+                                        if (!env.BUILD_NUMBER?.trim()){
+                                                error("BUILD_NUMBER is missing")
+                                        }
+                                        version = "v${env.GIT_BRANCH.tokenize('/').last()}-${env.BUILD_NUMBER}"
+
+                                        echo "VERSION TO BE DEPLOYED: ${version}"
 
                                         withDockerRegistry(url: 'https://registry.onlinedi.vision:5000',  credentialsId:'docker-registry') {
-                                                version="v" + sh(script:'echo ${GIT_BRANCH} | cut -d/ -f3- | xargs echo -n', returnStdout: true)
-                                                echo "VERSION TO BE DEPLOYED: $version"
-						sh "npm i"
-                                                sh "docker build . -t od-website:${version}"
-                                                sh "docker tag od-website:${version} registry.onlinedi.vision:5000/od-website:${version}"
-                                                sh "docker push registry.onlinedi.vision:5000/od-website:${version}"
+                                                sh """
+                                                        docker buildx bake \
+                                                            --file docker-bake.hcl \
+                                                            --push \
+                                                            release
+                                                """
                                         }
                                 }
                         }
