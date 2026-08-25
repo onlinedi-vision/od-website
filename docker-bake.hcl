@@ -1,13 +1,18 @@
 variable "GIT_BRANCH" {}
-variable "BUILD_NUMBER" {}
+
+group "default" {
+    targets =["release"]
+}
 
 function "tag" {
-    params = [branch, build_number]
-    result = "v${split("/", branch)[length(split("/", branch)) - 1]}-${build_number}"
+    params = [branch]
+    result = "v${split("/", branch)[length(split("/", branch)) - 1]}"
 }
 
 target "release" {
     target = "runtime"
 
-    tags = ["registry.onlinedi.vision:5000/od-website:${tag(GIT_BRANCH, BUILD_NUMBER)}"]
+    output = ["type=cacheonly"]
+
+    tags = ["registry.onlinedi.vision:5000/od-website:${tag(GIT_BRANCH)}"]
 }

@@ -9,19 +9,15 @@ pipeline {
                                         if (!env.GIT_BRANCH?.trim()) {
                                                 error("GIT_BRANCH is missing; cannot calculate image version")
                                         }
-                                        if (!env.BUILD_NUMBER?.trim()){
-                                                error("BUILD_NUMBER is missing")
-                                        }
-                                        version = "v${env.GIT_BRANCH.tokenize('/').last()}-${env.BUILD_NUMBER}"
+                                        version = "v${env.GIT_BRANCH.tokenize('/').last()}"
 
                                         echo "VERSION TO BE DEPLOYED: ${version}"
 
                                         withDockerRegistry(url: 'https://registry.onlinedi.vision:5000',  credentialsId:'docker-registry') {
                                                 sh """
-                                                        docker buildx bake \
-                                                            --file docker-bake.hcl \
-                                                            --push \
-                                                            release
+                                                            docker buildx bake \
+                                                                --file docker-bake.hcl \
+                                                                --set release.output=type=registry
                                                 """
                                         }
                                 }
