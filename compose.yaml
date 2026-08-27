@@ -1,13 +1,5 @@
 services:
   node:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    user: "node"
-    working_dir: /home/node/app
-    environment:
-      - NODE_ENV=production
-    volumes:
-      - ./:/home/node/app
+    build: .
     ports:
       - "127.0.0.1:3000:3000"
